@@ -1,0 +1,952 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FERO Kall – Restaurant & Grill · Hotel und Gasthof</title>
+<meta name="description" content="FERO Pizza & Grill in Kall: Burger, Steaks, Schnitzel, Grillteller, Pizza und Döner. Dazu Hotel und Gasthof im ehemaligen Hüttenhof. Tisch reservieren: 02441 8630.">
+<meta name="robots" content="noindex, nofollow"><!-- Entwurf: vor Livegang entfernen -->
+<meta name="theme-color" content="#0c0c0c">
+<!-- Vorschau: Für den Livegang Schriften und Bilder lokal einbinden (DSGVO) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Rye&family=Permanent+Marker&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "FERO Restaurant & Grill",
+  "servesCuisine": ["Burger", "Steaks", "Grill", "Pizza", "Döner", "Pasta"],
+  "priceRange": "€€",
+  "telephone": "+49 2441 8630",
+  "acceptsReservations": true,
+  "address": {"@type": "PostalAddress", "streetAddress": "Hüttenstraße 56", "postalCode": "53925", "addressLocality": "Kall", "addressCountry": "DE"},
+  "geo": {"@type": "GeoCoordinates", "latitude": 50.5447228, "longitude": 6.5686928},
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday","Thursday","Friday","Saturday"], "opens": "11:00", "closes": "22:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "21:00"}
+  ],
+  "sameAs": ["https://www.instagram.com/fero.kall/"]
+}
+</script>
+<style>
+:root{
+  --black:#0c0c0c; --board:#141414; --board-2:#1b1b1b; --board-3:#232323;
+  --gold:#e2b54f; --gold-l:#fbe7a1; --gold-d:#a8761f;
+  --red:#d62a1e; --red-2:#ff3b2f; --flame:#ff7a1a;
+  --text:#f3efe8; --dim:#aaa39a; --line:rgba(255,255,255,.1);
+  --display:"Anton","Impact","Arial Narrow Bold",sans-serif;
+  --western:"Rye","Georgia",serif;
+  --marker:"Permanent Marker","Comic Sans MS",cursive;
+  --body:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--black);color:var(--text);font-family:var(--body);line-height:1.55;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+h1,h2,h3{margin:0;font-weight:400}
+h2{font-family:var(--western);font-size:clamp(38px,6vw,76px);line-height:1.02;letter-spacing:.01em}
+h3{font-family:var(--display);font-size:26px;text-transform:uppercase;letter-spacing:.03em;line-height:1}
+.gold{background:linear-gradient(180deg,var(--gold-l) 0%,var(--gold) 42%,var(--gold-d) 68%,#f3d27a 100%);background-size:100% 220%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s ease-in-out infinite}
+@keyframes shine{0%,100%{background-position:0 0}50%{background-position:0 100%}}
+.marker{font-family:var(--marker);color:var(--red-2);font-weight:400}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.kicker::before{content:"";width:28px;height:2px;background:currentColor}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 26px;border-radius:6px;font:800 15px var(--body);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .25s ease}
+.btn:hover{transform:translateY(-3px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 12px 30px rgba(214,42,30,.4)}
+.btn-red:hover{background:var(--red-2);box-shadow:0 18px 40px rgba(214,42,30,.5)}
+.btn-gold{background:linear-gradient(180deg,var(--gold-l),var(--gold) 55%,var(--gold-d));color:#1a1307}
+.btn-ghost{color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.55)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 2px var(--gold)}
+
+/* Kreidetafel-Struktur */
+.chalk{background-color:var(--board);background-image:radial-gradient(120% 80% at 20% 0%,rgba(255,255,255,.045),transparent 60%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,var(--red),var(--flame),var(--gold));transform-origin:0 50%;transform:scaleX(0);z-index:100}
+
+/* Vorschau */
+.preview{background:#000;color:#cfcac3;font-size:13px}
+.preview .wrap{display:flex;align-items:center;gap:12px;padding-top:8px;padding-bottom:8px}
+.pill{display:inline-flex;align-items:center;gap:7px;background:#16a34a;color:#fff;font-weight:800;border-radius:999px;padding:3px 11px;font-size:12px;white-space:nowrap}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:#bbf7d0}
+
+/* Header */
+header.site{position:sticky;top:0;z-index:50;transition:background .4s ease,box-shadow .4s ease}
+header.site.scrolled{background:rgba(12,12,12,.88);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:80px;transition:height .4s var(--ease)}
+header.site.scrolled .wrap{height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .name{font-family:var(--display);font-size:30px;line-height:.9;letter-spacing:.08em}
+.logo .sub{display:block;font:700 9.5px var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-top:3px}
+nav.main{display:flex;gap:28px;font-weight:700;font-size:13.5px;letter-spacing:.1em;text-transform:uppercase}
+nav.main a{text-decoration:none;color:#d8d3cc;position:relative}
+nav.main a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+nav.main a:hover::after{transform:scaleX(1)}
+.head-cta{padding:12px 18px;font-size:13.5px}
+@media(max-width:980px){nav.main{display:none}}
+@media(max-width:480px){.head-cta .t{display:none}}
+
+/* Hero */
+.hero{position:relative;min-height:calc(100vh - 34px);display:flex;align-items:center;overflow:hidden;margin-top:-80px;padding:80px 0 0;isolation:isolate}
+.hero .fire{position:absolute;inset:auto -10% -35% -10%;height:85%;background:radial-gradient(55% 60% at 72% 100%,rgba(255,122,26,.5),rgba(214,42,30,.3) 45%,transparent 75%);filter:blur(12px);z-index:-1;animation:flicker 5s ease-in-out infinite alternate}
+@keyframes flicker{0%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.05)}100%{opacity:.85;transform:scale(1.01)}}
+.hero .vignette{position:absolute;inset:0;background:radial-gradient(80% 70% at 30% 40%,transparent,rgba(0,0,0,.7));z-index:-1}
+.embers{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.embers i{position:absolute;bottom:-10px;border-radius:50%;background:var(--gold-l);box-shadow:0 0 8px 2px rgba(255,140,40,.9);opacity:0;animation:rise linear infinite}
+@keyframes rise{0%{transform:translate(0,0);opacity:0}10%{opacity:1}100%{transform:translate(var(--dx,30px),-95vh);opacity:0}}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;width:100%;padding-top:40px;padding-bottom:70px}
+.badge{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;background:rgba(226,181,79,.1);border:1px solid rgba(226,181,79,.45);border-radius:999px;padding:8px 16px;font-weight:700;font-size:14px}
+.badge b{color:var(--gold)}
+.hero h1{font-family:var(--display);font-size:clamp(64px,10.5vw,150px);line-height:.88;text-transform:uppercase;letter-spacing:-.01em;margin:30px 0 8px}
+.hero h1 span{display:block}
+.hero h1 .o{-webkit-text-stroke:2px #fff;color:transparent}
+.hero .tag{font-family:var(--marker);color:var(--red-2);font-size:clamp(24px,3vw,36px);margin:0 0 22px;transform:rotate(-3deg);transform-origin:left;display:inline-block}
+.hero p.sub{font-size:19px;color:#cfc9c1;max-width:540px;margin:0 0 32px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.status{display:inline-flex;align-items:center;gap:10px;margin-top:28px;font-weight:700;font-size:14px;color:#e6e0d8}
+.status .dot{width:10px;height:10px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.6);animation:pulse 2s infinite}
+.status.closed .dot{background:#f87171;animation:none}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+.hero-art{position:relative;will-change:transform}
+.hero-art::before{content:"";position:absolute;left:50%;top:50%;width:115%;aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(255,122,26,.42),rgba(214,42,30,.14) 60%,transparent);z-index:-1}
+.burger-photo{width:min(460px,100%);aspect-ratio:4/5;margin:0 auto;overflow:hidden;-webkit-mask-image:radial-gradient(closest-side,#000 66%,transparent 100%);mask-image:radial-gradient(closest-side,#000 66%,transparent 100%)}
+.burger-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;transform:scale(1.08);transition:transform 1.6s var(--ease)}
+.hero-art.in .burger-photo img{transform:scale(1)}
+.sticker{position:absolute;right:0;top:6%;width:150px;height:150px;border-radius:50%;background:linear-gradient(180deg,var(--gold-l),var(--gold) 55%,var(--gold-d));color:#1a1307;display:grid;place-items:center;text-align:center;transform:rotate(12deg);box-shadow:0 18px 40px rgba(0,0,0,.5);animation:wobble 6s ease-in-out infinite}
+.sticker span{font-family:var(--display);font-size:22px;line-height:.95;text-transform:uppercase;display:block}
+.sticker b{font-family:var(--display);font-size:34px;font-weight:400;display:block;margin-top:2px}
+@keyframes wobble{50%{transform:rotate(4deg) scale(1.05)}}
+.quote-card{position:absolute;left:-4%;bottom:5%;max-width:300px;background:#fff;color:#111;border-radius:12px;padding:16px 18px;box-shadow:0 24px 50px rgba(0,0,0,.55);transform:rotate(-3deg)}
+.quote-card p{margin:6px 0 0;font-weight:700;font-size:15px;line-height:1.4}
+.quote-card small{display:block;margin-top:8px;color:#6b665f;font-size:12px}
+.stars{color:#f5a623;letter-spacing:2px}
+@media(max-width:980px){.hero{min-height:auto}.hero .wrap{grid-template-columns:1fr}.hero-art{width:100%;max-width:460px;margin:10px auto 0}.sticker{width:118px;height:118px}.sticker span{font-size:18px}.sticker b{font-size:26px}.quote-card{left:0}}
+
+/* Ticker */
+.ticker{background:linear-gradient(180deg,var(--gold-l),var(--gold) 55%,var(--gold-d));color:#1a1307;overflow:hidden;white-space:nowrap;transform:rotate(-1.5deg);margin:0 -20px;box-shadow:0 10px 30px rgba(0,0,0,.45);position:relative;z-index:2}
+.ticker .track{display:inline-flex;padding:15px 0;animation:run 30s linear infinite}
+.ticker span{font-family:var(--display);font-size:28px;text-transform:uppercase;letter-spacing:.05em;padding:0 22px;display:inline-flex;align-items:center;gap:44px}
+.ticker span::after{content:"🔥";font-size:20px}
+@keyframes run{to{transform:translateX(-50%)}}
+
+section{padding:120px 0;position:relative}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:54px}
+.sec-head p{max-width:470px;color:var(--dim);font-size:18px;margin:0}
+
+/* Smoothe Scroll-Animationen */
+.reveal{opacity:0;transform:translateY(46px);transition:opacity 1s var(--ease),transform 1.1s var(--ease);transition-delay:var(--d,0s)}
+.reveal.left{transform:translateX(-60px)}
+.reveal.right{transform:translateX(60px)}
+.reveal.zoom{transform:scale(.9)}
+.reveal.blur{filter:blur(10px);transition:opacity 1s var(--ease),transform 1.1s var(--ease),filter 1s var(--ease)}
+.reveal.in{opacity:1;transform:none;filter:none}
+.wipe{clip-path:inset(0 100% 0 0);transition:clip-path 1.2s var(--ease);transition-delay:var(--d,0s)}
+.wipe.in{clip-path:inset(0 0 0 0)}
+.hero .tag.in{transform:rotate(-3deg)}
+@media (prefers-reduced-motion:reduce){.reveal,.wipe{opacity:1;transform:none;filter:none;clip-path:none;transition:none}.ticker .track,.hero .fire,.sticker,.embers,.gold{animation:none!important}.embers{display:none}}
+
+/* Grill-Bereich */
+.grill{background:linear-gradient(180deg,var(--black),#1c0c05 45%,var(--black));overflow:hidden}
+.grill .glow{position:absolute;left:50%;top:50%;width:900px;height:900px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(255,122,26,.25),transparent);pointer-events:none}
+.grill .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative}
+.steak-list{list-style:none;padding:0;margin:30px 0 34px;display:grid;gap:0}
+.steak-list li{display:flex;align-items:baseline;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:17px;font-weight:600}
+.steak-list li::after{content:"";order:1;flex:1;border-bottom:2px dotted rgba(226,181,79,.35);transform:translateY(-4px)}
+.steak-list li b{order:2;font-family:var(--display);font-size:24px;font-weight:400;color:var(--gold)}
+.steak-list small{display:block;color:var(--dim);font-weight:500;font-size:13.5px}
+.plate{position:relative;width:100%;aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:0 0 0 2px rgba(226,181,79,.35),0 40px 80px rgba(0,0,0,.6)}
+.plate img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);transition:transform 1.6s var(--ease)}
+.plate.in img{transform:scale(1)}
+.plate-wrap{position:relative}
+.price-tag{position:absolute;right:0;bottom:8%;background:var(--red);color:#fff;font-family:var(--display);font-size:38px;padding:10px 18px;transform:rotate(-6deg);box-shadow:0 14px 30px rgba(0,0,0,.5);z-index:2}
+.price-tag small{display:block;font:800 11px var(--body);letter-spacing:.14em;text-transform:uppercase}
+@media(max-width:900px){.grill .wrap{grid-template-columns:1fr}.plate-wrap{max-width:420px;width:100%;margin:0 auto}}
+
+/* Klassiker */
+.favs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.fav{position:relative;border-radius:16px;padding:30px;min-height:420px;display:flex;flex-direction:column;overflow:hidden;background:var(--board-2);border:1px solid var(--line);transition:opacity 1s var(--ease),transform .6s var(--ease),border-color .4s ease}
+.fav:hover{transform:translateY(-10px);border-color:rgba(226,181,79,.6)}
+.fav .media{position:relative;margin:-30px -30px 22px;height:240px;overflow:hidden}
+.fav .media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--board-2),transparent 55%)}
+.fav .media img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.fav:hover .media img{transform:scale(1.08)}
+.fav .no{position:absolute;top:16px;left:16px;z-index:2;background:var(--red);color:#fff;font-family:var(--display);font-size:15px;letter-spacing:.1em;padding:4px 10px;border-radius:4px}
+.fav h3{font-size:34px}
+.fav p{color:var(--dim);margin:10px 0 22px}
+.fav .bottom{margin-top:auto;display:flex;align-items:center;justify-content:space-between}
+.fav .bottom b{font-family:var(--display);font-size:42px;font-weight:400;color:var(--gold)}
+.fav .bottom a{font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#fff;border-bottom:2px solid var(--red)}
+@media(max-width:980px){.favs{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.favs{grid-template-columns:1fr}}
+
+/* Speisekarte */
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px;position:sticky;top:64px;z-index:5;padding:12px 0;background:linear-gradient(var(--board) 75%,transparent)}
+.tabs button{font:800 13px var(--body);letter-spacing:.1em;text-transform:uppercase;padding:12px 18px;border-radius:4px;border:1px solid rgba(255,255,255,.22);background:transparent;color:#fff;cursor:pointer;transition:background .25s ease,border-color .25s ease,color .25s ease}
+.tabs button:hover{border-color:var(--gold)}
+.tabs button[aria-selected="true"]{background:linear-gradient(180deg,var(--gold-l),var(--gold) 55%,var(--gold-d));border-color:var(--gold);color:#1a1307}
+.panel{display:none}
+.panel.active{display:block;animation:fadeUp .6s var(--ease)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.board{background:rgba(0,0,0,.35);border:1px solid var(--line);border-radius:14px;padding:34px 38px;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.board + .board{margin-top:26px}
+.two .board + .board{margin-top:0}
+.board-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;border-bottom:2px solid rgba(226,181,79,.5);padding-bottom:12px;margin-bottom:6px}
+.board-head h3{font-family:var(--western);font-size:34px;text-transform:none;letter-spacing:.02em}
+.board-head small{color:var(--dim);font-size:13px;text-align:right}
+.row{display:grid;grid-template-columns:46px 1fr auto;gap:2px 16px;align-items:baseline;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.row .n{font-family:var(--display);color:var(--red-2);font-size:19px}
+.row h4{margin:0;font-size:17px;font-weight:800}
+.row .p{font-family:var(--display);font-size:22px;white-space:nowrap;color:var(--gold-l)}
+.row small{grid-column:2/3;color:var(--dim);font-size:14px}
+.note{margin-top:20px;color:var(--dim);font-size:14px}
+.note-marker{font-family:var(--marker);color:var(--red-2);font-size:24px;transform:rotate(-2deg);display:inline-block;margin-top:26px}
+@media(max-width:900px){.two{grid-template-columns:1fr}.two .board + .board{margin-top:0}}
+@media(max-width:700px){.tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -20px 26px;padding:12px 20px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 20px,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,transparent,#000 20px,#000 calc(100% - 28px),transparent)}.tabs::-webkit-scrollbar{display:none}.tabs button{flex:none}}
+@media(max-width:520px){.board{padding:20px 14px}.board-head h3{font-size:26px}.row{grid-template-columns:30px 1fr auto;gap:2px 8px}.row h4{font-size:15px}.row .p{font-size:18px}.row small{font-size:13px}.tabs{top:60px}.tabs button{padding:9px 12px;font-size:11.5px}}
+
+/* Hotel */
+.hotel .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hotel-media{position:relative;height:560px}
+.hotel-media .a,.hotel-media .b{position:absolute;overflow:hidden;border-radius:14px;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.hotel-media .a{inset:0 18% 14% 0}
+.hotel-media .b{right:0;bottom:0;width:48%;height:46%;border:6px solid var(--black)}
+.hotel-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
+.hotel-media .a img{transform:scale(1.12)}
+.hotel-media.in .a img{transform:scale(1)}
+.hotel-media .stamp{position:absolute;left:-14px;bottom:20%;background:var(--red);color:#fff;font-family:var(--display);font-size:20px;letter-spacing:.06em;text-transform:uppercase;padding:10px 16px;transform:rotate(-5deg);box-shadow:0 14px 30px rgba(0,0,0,.5)}
+.hotel ul{list-style:none;padding:0;margin:26px 0 32px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hotel li{display:flex;gap:12px;align-items:flex-start;background:var(--board-2);border:1px solid var(--line);border-radius:12px;padding:16px}
+.hotel li svg{flex:none;color:var(--gold)}
+.hotel li b{display:block}
+.hotel li span{color:var(--dim);font-size:14px}
+.room-form{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;background:var(--board-2);border:1px solid var(--line);border-radius:14px;padding:20px}
+.room-form label{display:grid;gap:6px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.room-form input,.room-form select{font:500 15px var(--body);padding:11px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.15);background:#0f0f0f;color:#fff;color-scheme:dark}
+.room-form .full{grid-column:1/-1}
+.room-form .ok{display:none;grid-column:1/-1;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.4);color:#bbf7d0;border-radius:10px;padding:14px;font-weight:600}
+@media(max-width:900px){.hotel .wrap{grid-template-columns:1fr}.hotel-media{height:420px}.hotel ul{grid-template-columns:1fr}.room-form{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.room-form{grid-template-columns:1fr}}
+
+/* Reservieren */
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.way{text-align:center;padding:40px 28px;border-radius:16px;background:var(--board-2);border:1px solid var(--line);transition:opacity 1s var(--ease),transform .6s var(--ease),border-color .4s ease}
+.way:hover{transform:translateY(-6px);border-color:rgba(226,181,79,.5)}
+.way .ic{width:84px;height:84px;margin:0 auto 20px;border-radius:50%;display:grid;place-items:center;background:var(--red);box-shadow:0 0 0 8px rgba(214,42,30,.18)}
+.way h3{font-size:30px}
+.way p{color:var(--dim);margin:10px 0 0}
+.hotline{margin-top:22px;border-radius:16px;padding:40px;background:var(--red);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;position:relative;overflow:hidden}
+.hotline::after{content:"";position:absolute;right:-80px;top:-80px;width:300px;height:300px;border-radius:50%;border:50px solid rgba(255,255,255,.1)}
+.hotline small{font:800 12px var(--body);letter-spacing:.2em;text-transform:uppercase;opacity:.85}
+.hotline a.num{display:block;font-family:var(--display);font-size:clamp(46px,7vw,84px);line-height:1;text-decoration:none;color:#fff}
+@media(max-width:860px){.ways{grid-template-columns:1fr}}
+
+/* Stimmen */
+.voices .grid{display:grid;grid-template-columns:1.3fr .7fr;gap:22px}
+.bigq{border-radius:16px;padding:44px;background:var(--board-2);border:1px solid var(--line);position:relative}
+.bigq::before{content:"“";position:absolute;right:30px;top:-24px;font-family:var(--western);font-size:200px;color:rgba(226,181,79,.25);line-height:1}
+.bigq blockquote{margin:14px 0 0;font-size:clamp(22px,2.6vw,32px);font-weight:800;line-height:1.3;letter-spacing:-.01em}
+.bigq blockquote em{font-style:normal;color:var(--gold)}
+.bigq cite{display:block;margin-top:18px;color:var(--dim);font-style:normal}
+.topics{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.topics span{border:1px solid rgba(226,181,79,.4);border-radius:999px;padding:7px 14px;font-size:14px;color:#e9e3d9}
+.topics b{color:var(--gold)}
+.counters{display:grid;gap:22px}
+.counter{border-radius:16px;padding:28px;background:var(--board-2);border:1px solid var(--line)}
+.counter b{display:block;font-family:var(--display);font-size:64px;line-height:1;font-weight:400}
+.counter span{color:var(--dim)}
+@media(max-width:860px){.voices .grid{grid-template-columns:1fr}}
+
+/* Instagram */
+.insta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ig{position:relative;aspect-ratio:4/5;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;text-decoration:none;color:#fff;background:var(--board-2)}
+.ig::before{content:"";position:absolute;inset:0;background:var(--bg);transition:transform .9s var(--ease)}
+.ig:hover::before{transform:scale(1.08)}
+.ig > *{position:relative}
+.ig .t{font-family:var(--display);font-size:28px;line-height:.95;text-transform:uppercase}
+.ig .s{font-family:var(--marker);color:var(--gold-l);font-size:18px}
+@media(max-width:860px){.insta-grid{grid-template-columns:1fr 1fr}}
+
+/* Besuch */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.hours{border-radius:16px;padding:36px;background:var(--board-2);border:1px solid var(--line)}
+.hours table{width:100%;border-collapse:collapse;margin-top:16px}
+.hours td{padding:14px 0;border-bottom:1px solid var(--line);font-size:17px}
+.hours td:last-child{text-align:right;font-weight:800}
+.hours tr.today td{color:var(--gold)}
+.hours tr.today td:first-child::after{content:"  · heute";font-size:13px;font-weight:700}
+.where{border-radius:16px;padding:36px;background:var(--red);display:flex;flex-direction:column;gap:18px;position:relative;overflow:hidden}
+.where address{font-style:normal;font-family:var(--display);font-size:clamp(36px,4.6vw,56px);line-height:1;text-transform:uppercase}
+.where .hint{font-family:var(--marker);font-size:22px}
+.where .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
+.where .links a{background:#fff;color:#111;text-decoration:none;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:12px 16px;border-radius:4px}
+@media(max-width:860px){.visit{grid-template-columns:1fr}}
+
+footer{background:#000;color:#8d877f;padding:50px 0 120px;font-size:14px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px}
+footer a{color:#ddd;text-decoration:none;margin-right:16px}
+footer .slogan{font-family:var(--marker);color:var(--red-2);font-size:22px}
+
+/* Mobile Leiste */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(12,12,12,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.mbar .btn{flex:1;padding:15px 10px;font-size:13.5px}
+
+/* Assistent */
+.fab{position:fixed;right:20px;bottom:20px;z-index:70;display:flex;align-items:center;gap:10px;background:#fff;color:#111;border:0;border-radius:999px;padding:10px 18px 10px 10px;font:800 14px var(--body);cursor:pointer;box-shadow:0 14px 34px rgba(0,0,0,.5);transition:transform .35s var(--ease)}
+.fab:hover{transform:translateY(-3px)}
+.fab .dot{width:38px;height:38px;border-radius:50%;background:var(--red);display:grid;place-items:center}
+.chat{position:fixed;right:20px;bottom:86px;z-index:71;width:min(370px,calc(100vw - 24px));max-height:min(560px,calc(100vh - 140px));display:flex;flex-direction:column;background:#fff;color:#111;border-radius:18px;box-shadow:0 30px 70px rgba(0,0,0,.6);overflow:hidden;opacity:0;transform:translateY(16px) scale(.97);pointer-events:none;transition:opacity .35s var(--ease),transform .45s var(--ease)}
+.chat.open{opacity:1;transform:none;pointer-events:auto}
+.chat-head{background:var(--black);color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px}
+.chat-head small{display:block;color:#86efac;font-size:12px}
+.chat-head button{margin-left:auto;background:none;border:0;color:#fff;font-size:22px;cursor:pointer}
+.chat-body{padding:16px;overflow-y:auto;display:flex;flex-direction:column;gap:10px;background:#f6f3ee;flex:1;min-height:200px}
+.msg{max-width:86%;padding:10px 14px;border-radius:14px;font-size:14.5px;line-height:1.45;animation:pop .35s var(--ease)}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.msg.bot{background:#fff;border:1px solid #e6e0d7;border-bottom-left-radius:4px}
+.msg.me{align-self:flex-end;background:var(--red);color:#fff;border-bottom-right-radius:4px}
+.quick{display:flex;flex-wrap:wrap;gap:8px}
+.quick button{border:1.5px solid var(--red);background:#fff;color:var(--red);border-radius:999px;padding:7px 12px;font:800 13px var(--body);cursor:pointer}
+.chat-in{display:flex;gap:8px;padding:12px;border-top:1px solid #e6e0d7}
+.chat-in input{flex:1;font:inherit;padding:11px 13px;border:1px solid #e6e0d7;border-radius:8px}
+.chat-in button{border:0;background:var(--red);color:#fff;border-radius:8px;padding:0 14px;font-weight:800;cursor:pointer}
+@media(max-width:760px){.mbar{display:flex}.fab{bottom:88px;padding:8px}.fab .label{display:none}.chat{bottom:148px}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<div class="preview">
+  <div class="wrap">
+    <span class="pill">Vorschau</span>
+    <span>Unverbindlicher Website-Entwurf für FERO Restaurant &amp; Grill, nicht die offizielle Website</span>
+  </div>
+</div>
+
+<header class="site" id="header">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="FERO Kall – Startseite">
+      <svg width="46" height="46" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="38" r="20" fill="none" stroke="#e8e4dc" stroke-width="3.5"/>
+        <path d="M18 34h28M16 40h32M18 46h28" stroke="#e8e4dc" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M32 4c5 7-2 10 3 17 2-4 6-5 6-10 7 7 5 15 0 20H23c-6-6-4-14 2-18 0 5 3 6 4 8 1-7-4-10 3-17z" fill="#d62a1e"/>
+        <path d="M32 12c2 5-1 7 1 11 2-2 4-4 4-6 3 5 2 9-1 12h-8c-2-3-2-7 1-10 0 2 1 3 2 4 0-4-1-7 1-11z" fill="#ff7a1a"/>
+      </svg>
+      <span><span class="name">FERO</span><span class="sub">Pizza &amp; Grill · Kall</span></span>
+    </a>
+    <nav class="main" aria-label="Hauptnavigation">
+      <a href="#karte">Speisekarte</a>
+      <a href="#grill">Grill &amp; Steaks</a>
+      <a href="#hotel">Hotel</a>
+      <a href="#reservieren">Reservieren</a>
+      <a href="#besuch">Öffnungszeiten</a>
+    </nav>
+    <a class="btn btn-red head-cta" href="tel:+4924418630">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+      <span class="t">Tisch reservieren</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero chalk">
+  <div class="fire" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="embers" id="embers" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <span class="badge reveal"><b>🔥 Restaurant &amp; Grill</b> · Hotel und Gasthof · seit 2022</span>
+      <h1>
+        <span class="reveal blur" style="--d:.1s">Burger.</span>
+        <span class="reveal blur gold" style="--d:.22s">Steaks.</span>
+        <span class="reveal blur o" style="--d:.34s">Pizza.</span>
+      </h1>
+      <p class="tag reveal" style="--d:.45s">Alles natürlich auch zum Mitnehmen!</p>
+      <p class="sub reveal" style="--d:.55s">Über 120 Gerichte von Riesenburgern über Schnitzel bis zum Grillteller für vier. Frisch zubereitet im ehemaligen Hüttenhof in Kall, mit Hotel und Gasthof im selben Haus.</p>
+      <div class="cta-row reveal" style="--d:.65s">
+        <a class="btn btn-red" href="tel:+4924418630">Tisch reservieren</a>
+        <a class="btn btn-ghost" href="#karte">Zur Speisekarte</a>
+      </div>
+      <div class="status reveal" id="status" style="--d:.75s"><span class="dot"></span><span id="statusText">Öffnungszeiten werden geladen</span></div>
+    </div>
+    <div class="hero-art reveal zoom" id="heroArt" style="--d:.2s">
+      <div class="burger-photo">
+        <img src="https://images.unsplash.com/photo-1613277367862-f8ef14db7748?auto=format&fit=crop&w=1000&q=80" alt="Hoher Triple-Cheeseburger mit Salat auf dunklem Hintergrund" fetchpriority="high">
+      </div>
+      <div class="sticker"><div><span>Big Mama<br>XXL</span><b>23 €</b></div></div>
+      <figure class="quote-card" style="margin:0">
+        <span class="stars">★★★★★</span>
+        <p>„Das Essen war genau richtig und wir konnten anschließend mit neuer Energie die nächsten Anstiege in Angriff nehmen – Super!“</p>
+        <small>Sebastian · Google-Bewertung · eine von über 700</small>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="track">
+    <span>Burger</span><span>Steaks</span><span>Schnitzel</span><span>Grillteller</span><span>Pizza</span><span>Döner</span><span>Pasta</span><span>Lahmacun</span>
+    <span>Burger</span><span>Steaks</span><span>Schnitzel</span><span>Grillteller</span><span>Pizza</span><span>Döner</span><span>Pasta</span><span>Lahmacun</span>
+  </div>
+</div>
+
+<section class="grill" id="grill">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <span class="kicker reveal">Vom Grill</span>
+      <h2 class="reveal" style="margin-top:16px"><span class="gold">Steaks &amp;</span><br>Grillteller.</h2>
+      <ul class="steak-list">
+        <li class="reveal" style="--d:.05s"><span>Argentinisches Rumpsteak 250 g<small>inkl. Pommes oder Reis und Salat</small></span><b>28,00 €</b></li>
+        <li class="reveal" style="--d:.12s"><span>Argentinisches Rumpsteak 350 g<small>für den großen Hunger</small></span><b>35,90 €</b></li>
+        <li class="reveal" style="--d:.19s"><span>Mr. Fero Grill Mix<small>Hüftsteak, Lammkotelett, Bacon, Hähnchenbrust</small></span><b>30,00 €</b></li>
+        <li class="reveal" style="--d:.26s"><span>Gemischter Grillteller für 2<small>zum Teilen, mit allem, was der Grill hergibt</small></span><b>49,00 €</b></li>
+        <li class="reveal" style="--d:.33s"><span>Gemischter Grillteller für 4<small>für Familie und Freunde</small></span><b>95,00 €</b></li>
+      </ul>
+      <a class="btn btn-gold reveal" href="#karte" data-tab="t-grill">Alle Grillgerichte</a>
+    </div>
+    <div class="plate-wrap reveal zoom">
+      <div class="plate" id="plate"><img src="https://images.unsplash.com/photo-1556269923-e4ef51d69638?auto=format&fit=crop&w=1000&q=80" alt="Steak auf dem Grill über glühender Kohle" loading="lazy"></div>
+      <div class="price-tag"><small>Grillteller für 2</small>49 €</div>
+    </div>
+  </div>
+</section>
+
+<section id="klassiker" class="chalk">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="kicker reveal">Die Klassiker</span>
+        <h2 class="reveal" style="margin-top:16px">Was Kall<br><span class="gold">bestellt.</span></h2>
+      </div>
+      <p class="reveal">Burger werden in über 60 Google-Bewertungen erwähnt. Hier unsere Lieblinge, frisch für Sie zubereitet.</p>
+    </div>
+    <div class="favs">
+      <article class="fav reveal">
+        <span class="no">Nr. 16</span>
+        <div class="media"><img src="https://images.unsplash.com/photo-1581430678167-5c17b302c5e1?auto=format&fit=crop&w=900&q=75" alt="Doppelter Burger mit Cheddar, Bacon und Zwiebeln" loading="lazy"></div>
+        <h3>Big Mama XXL</h3>
+        <p>Mit Cheddar, Bacon und Joppiesauce. Belegt mit Blattsalat, Tomaten, Zwiebeln und Gewürzgurken.</p>
+        <div class="bottom"><b>23,00 €</b><a href="tel:+4924418630">Bestellen</a></div>
+      </article>
+      <article class="fav reveal" style="--d:.12s">
+        <span class="no">Nr. 32</span>
+        <div class="media"><img src="https://images.unsplash.com/photo-1640346060848-ad6921833885?auto=format&fit=crop&w=900&q=75" alt="Paniertes Schnitzel mit Salat und einem Glas Bier" loading="lazy"></div>
+        <h3>Jägerschnitzel</h3>
+        <p>Mit Jägersauce, dazu Pommes oder Reis und Salat. Einer von zehn Schnitzel-Klassikern.</p>
+        <div class="bottom"><b>14,00 €</b><a href="tel:+4924418630">Bestellen</a></div>
+      </article>
+      <article class="fav reveal" style="--d:.24s">
+        <span class="no">Nr. 53</span>
+        <div class="media"><img src="https://images.unsplash.com/photo-1594489883219-010b0e5eeb9d?auto=format&fit=crop&w=900&q=75" alt="Döner-Teller mit Fleisch und Pommes" loading="lazy"></div>
+        <h3>Chili Cheese Döner</h3>
+        <p>Mit Pommes, Röstzwiebeln, Samurai-Cheddar-Sauce, Redpepperjam und Jalapeños.</p>
+        <div class="bottom"><b>15,00 €</b><a href="tel:+4924418630">Bestellen</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="chalk" id="karte" style="background-color:#111">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="kicker reveal">Speisekarte</span>
+        <h2 class="reveal" style="margin-top:16px">Unsere <span class="gold">Karte.</span></h2>
+      </div>
+      <p class="reveal">Alle Burger mit Blattsalat, Tomaten, Zwiebeln und Gewürzgurken. Schnitzel, Grill und Steaks inklusive Pommes oder Reis und Salat.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Kategorien">
+      <button role="tab" id="t-burger" aria-controls="p-burger" aria-selected="true">Burger</button>
+      <button role="tab" id="t-schnitzel" aria-controls="p-schnitzel" aria-selected="false">Schnitzel</button>
+      <button role="tab" id="t-grill" aria-controls="p-grill" aria-selected="false">Grill, Steaks &amp; Pfanne</button>
+      <button role="tab" id="t-doener" aria-controls="p-doener" aria-selected="false">Döner &amp; Lahmacun</button>
+      <button role="tab" id="t-pizza" aria-controls="p-pizza" aria-selected="false">Pizza</button>
+      <button role="tab" id="t-pasta" aria-controls="p-pasta" aria-selected="false">Pasta &amp; Überbacken</button>
+      <button role="tab" id="t-salate" aria-controls="p-salate" aria-selected="false">Salate, Snacks &amp; Extras</button>
+    </div>
+
+    <div class="panel active" id="p-burger" role="tabpanel" aria-labelledby="t-burger">
+      <div class="two">
+        <div class="board">
+          <div class="board-head"><h3>Burger</h3></div>
+          <div class="row"><span class="n">12</span><h4>Basicburger</h4><span class="p">10,00</span><small>mit Ketchup und Mayo von Heinz</small></div>
+          <div class="row"><span class="n">13</span><h4>Cheeseburger</h4><span class="p">11,00</span><small>mit Ketchup und Mayo von Heinz</small></div>
+          <div class="row"><span class="n">14</span><h4>Giant Doubleburger</h4><span class="p">16,00</span><small>mit Cheddar, Bacon und Saucen</small></div>
+          <div class="row"><span class="n">15</span><h4>Tripleburger</h4><span class="p">19,00</span><small>mit Bacon, Cheddar und Joppiesauce</small></div>
+          <div class="row"><span class="n">16</span><h4>Big Mama XXL</h4><span class="p">23,00</span><small>mit Cheddar, Bacon und Joppiesauce</small></div>
+          <div class="row"><span class="n">17</span><h4>Hawaiiburger</h4><span class="p">12,00</span><small>mit Ananas, Cheddar und Joppiesauce</small></div>
+          <div class="row"><span class="n">18</span><h4>Samuraiburger</h4><span class="p">12,00</span><small>mit Röstzwiebeln und Samuraisauce</small></div>
+          <div class="row"><span class="n">19</span><h4>Chilli-Cheeseburger</h4><span class="p">12,00</span><small>mit Chilli-Cheesesauce</small></div>
+          <div class="row"><span class="n">20</span><h4>Baconburger</h4><span class="p">13,00</span><small>mit Cheddar, Bacon und Saucen</small></div>
+          <div class="row"><span class="n">21</span><h4>Chickenburger</h4><span class="p">11,50</span><small>knuspriges Chicken und hausgemachte Sweet-Chilisauce</small></div>
+        </div>
+        <div class="board">
+          <div class="board-head"><h3>Burger Specials</h3></div>
+          <div class="row"><span class="n">22</span><h4>Burger Deluxe</h4><span class="p">13,00</span><small>mit frisch gebratenen Zwiebeln, Bacon und BBQ-Sauce</small></div>
+          <div class="row"><span class="n">23</span><h4>Homestyle Burger</h4><span class="p">12,00</span><small>mit Rucola, Parmesan und Saucen</small></div>
+          <div class="row"><span class="n">24</span><h4>Veggieburger (vegan)</h4><span class="p">11,00</span><small>mit Sweet-Chilisauce</small></div>
+          <div class="row"><span class="n">25</span><h4>Chicken-Beefburger</h4><span class="p">16,50</span><small>knuspriges Chicken, Beef, Bacon, Cheddar und Joppiesauce</small></div>
+          <div class="row"><span class="n">26</span><h4>Salmonburger</h4><span class="p">17,00</span><small>Alaska-Seelachsfilet, Rucola, Parmesan und Remoulade</small></div>
+          <div class="row"><span class="n">27</span><h4>Kall Burger</h4><span class="p">12,00</span><small>Dönerfleisch und BBQ-Sauce</small></div>
+          <div class="row"><span class="n">28</span><h4>Beef-Brothersburger</h4><span class="p">23,00</span><small>100 % Roastbeef Argentinia (Black Angus) 200 g, gebratene Zwiebeln, BBQ-Sauce</small></div>
+          <div class="row"><span class="n">29</span><h4>Parma Burger</h4><span class="p">13,50</span><small>Parmaschinken und Parmesanflocken</small></div>
+          <div class="row"><span class="n">30</span><h4>Camembert Burger</h4><span class="p">13,50</span><small>Camembert-Käse und Mangosauce</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="p-schnitzel" role="tabpanel" aria-labelledby="t-schnitzel" hidden>
+      <div class="board">
+        <div class="board-head"><h3>Schnitzel</h3><small>inkl. Pommes / Reis und Salat</small></div>
+        <div class="row"><span class="n">31</span><h4>Wiener Art</h4><span class="p">12,00</span><small>mit Zitrone</small></div>
+        <div class="row"><span class="n">32</span><h4>Jägerschnitzel</h4><span class="p">14,00</span><small>mit Jägersauce</small></div>
+        <div class="row"><span class="n">33</span><h4>Paprikaschnitzel Ungarischer Art</h4><span class="p">14,00</span><small>mit Paprikasauce</small></div>
+        <div class="row"><span class="n">34</span><h4>Champignonschnitzel</h4><span class="p">15,00</span><small>mit gebratenen Zwiebeln, Champignons und Weißwein-Sahnesauce</small></div>
+        <div class="row"><span class="n">35</span><h4>Rahmschnitzel</h4><span class="p">15,00</span><small>mit Rahmsauce</small></div>
+        <div class="row"><span class="n">36</span><h4>Schnitzel Hollandaise</h4><span class="p">15,00</span><small>mit Hollandaisesauce</small></div>
+        <div class="row"><span class="n">37</span><h4>Zwiebelschnitzel</h4><span class="p">15,00</span><small>mit gebratenen Zwiebeln und Champignons</small></div>
+        <div class="row"><span class="n">38</span><h4>Garnelenschnitzel</h4><span class="p">16,00</span><small>mit gebratenen Garnelen und Currysauce oder Sahnesauce</small></div>
+        <div class="row"><span class="n">39</span><h4>Schnitzel überbacken</h4><span class="p">15,50</span><small>mit Sahnesauce und Goudakäse</small></div>
+        <div class="row"><span class="n">40</span><h4>Hawaiischnitzel</h4><span class="p">16,50</span><small>mit Hinterschinken, Ananas, Sahnesauce und Goudakäse</small></div>
+      </div>
+    </div>
+
+    <div class="panel" id="p-grill" role="tabpanel" aria-labelledby="t-grill" hidden>
+      <div class="two">
+        <div class="board">
+          <div class="board-head"><h3>Grillspezialitäten</h3><small>inkl. Pommes / Reis und Salat</small></div>
+          <div class="row"><span class="n">44</span><h4>Hähnchenbrust</h4><span class="p">18,00</span></div>
+          <div class="row"><span class="n">45</span><h4>Lammspieß</h4><span class="p">20,00</span></div>
+          <div class="row"><span class="n">46</span><h4>Lammkotelett</h4><span class="p">23,00</span></div>
+          <div class="row"><span class="n">47</span><h4>Gemischter Grillteller</h4><span class="p">25,00</span><small>mit Hähnchenspieß, Lammspieß, Lammkotelett, Dönerfleisch und Salat</small></div>
+          <div class="row"><span class="n">48</span><h4>Gemischter Grillteller für 2 Personen</h4><span class="p">49,00</span></div>
+          <div class="row"><span class="n">49</span><h4>Gemischter Grillteller für 4 Personen</h4><span class="p">95,00</span></div>
+          <div class="row"><span class="n">50</span><h4>Cevapcici</h4><span class="p">18,00</span><small>6 gegrillte Röllchen aus Hackfleisch</small></div>
+        </div>
+        <div>
+          <div class="board">
+            <div class="board-head"><h3>Steaks</h3><small>inkl. Pommes / Reis und Salat</small></div>
+            <div class="row"><span class="n">★</span><h4>Original Argentinisches Rumpsteak 250 g</h4><span class="p">28,00</span></div>
+            <div class="row"><span class="n">★</span><h4>Original Argentinisches Rumpsteak 300 g</h4><span class="p">32,00</span></div>
+            <div class="row"><span class="n">★</span><h4>Original Argentinisches Rumpsteak 350 g</h4><span class="p">35,90</span></div>
+            <div class="row"><span class="n">★</span><h4>Mr. Fero Grill Mix</h4><span class="p">30,00</span><small>argentinisches Hüftsteak (100 g), Lammkotelett, Bacon, Hähnchenbrust, Salat und Pommes oder Reis</small></div>
+          </div>
+          <div class="board" style="margin-top:26px">
+            <div class="board-head"><h3>Pfannengerichte</h3><small>nur mit Reis</small></div>
+            <div class="row"><span class="n">41</span><h4>Hähnchenpfanne</h4><span class="p">15,50</span><small>Hähnchenbrust, Paprika, Tomaten, Champignons, Knoblauch und Sahnesauce</small></div>
+            <div class="row"><span class="n">42</span><h4>Garnelenpfanne</h4><span class="p">17,00</span><small>Garnelen, Champignons, Broccoli, Erbsen, Knoblauch und Sahnesauce</small></div>
+            <div class="row"><span class="n">43</span><h4>Steakpfanne</h4><span class="p">18,00</span><small>argentinisches Filetsteak, Paprika, Zwiebeln und Tomaten in Tomaten-Sahnesauce</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="p-doener" role="tabpanel" aria-labelledby="t-doener" hidden>
+      <div class="two">
+        <div class="board">
+          <div class="board-head"><h3>Dönergerichte</h3></div>
+          <div class="row"><span class="n">51</span><h4>Döner Teller</h4><span class="p">12,00</span><small>mit Pommes, Zwiebeln und Tzatziki</small></div>
+          <div class="row"><span class="n">52</span><h4>Döner Teller mit Salat</h4><span class="p">12,90</span><small>mit Pommes, gemischtem Salat und Tzatziki</small></div>
+          <div class="row"><span class="n">53</span><h4>Chili Cheese Döner</h4><span class="p">15,00</span><small>mit Pommes, Röstzwiebeln, Samurai-Cheddar-Sauce, Redpepperjam und Jalapeños</small></div>
+          <div class="row"><span class="n">58</span><h4>Döner überbacken</h4><span class="p">14,50</span><small>mit Maccaroni und Sahnesauce, Beilage Pommes</small></div>
+          <div class="row"><span class="n">59</span><h4>Döner überbacken à la Fero</h4><span class="p">16,00</span><small>mit Maccaroni, Sahnesauce, Weichkäse, Oliven und Pommes</small></div>
+          <div class="row"><span class="n">60</span><h4>Portion Dönerfleisch</h4><span class="p">15,00</span></div>
+        </div>
+        <div class="board">
+          <div class="board-head"><h3>Lahmacun</h3></div>
+          <div class="row"><span class="n">95</span><h4>Lahmacun</h4><span class="p">5,00</span><small>ohne alles</small></div>
+          <div class="row"><span class="n">96</span><h4>Lahmacun mit Salat</h4><span class="p">7,50</span><small>mit Salat und Tzatziki</small></div>
+          <div class="row"><span class="n">97</span><h4>Lahmacun komplett</h4><span class="p">10,00</span><small>mit Dönerfleisch, Salat und Tzatziki</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="p-pizza" role="tabpanel" aria-labelledby="t-pizza" hidden>
+      <div class="two">
+        <div class="board">
+          <div class="board-head"><h3>Pizza</h3><small>30 cm</small></div>
+          <div class="row"><span class="n">61</span><h4>Margherita</h4><span class="p">9,50</span><small>mit Tomatensauce und Goudakäse</small></div>
+          <div class="row"><span class="n">62</span><h4>Funghi</h4><span class="p">10,50</span><small>mit frischen Champignons</small></div>
+          <div class="row"><span class="n">63</span><h4>Prosciutto</h4><span class="p">11,00</span><small>mit Hinterschinken</small></div>
+          <div class="row"><span class="n">64</span><h4>Tonno</h4><span class="p">11,00</span><small>mit Thunfisch</small></div>
+          <div class="row"><span class="n">65</span><h4>Sicilia</h4><span class="p">12,00</span><small>mit Thunfisch und Zwiebeln</small></div>
+          <div class="row"><span class="n">66</span><h4>Salami</h4><span class="p">11,00</span><small>mit Salami</small></div>
+          <div class="row"><span class="n">67</span><h4>Inferno</h4><span class="p">12,50</span><small>mit Salami und Hot-Chili-Jalapeños</small></div>
+          <div class="row"><span class="n">68</span><h4>Mista</h4><span class="p">13,00</span><small>mit Hinterschinken, Salami, Thunfisch und Champignons</small></div>
+          <div class="row"><span class="n">69</span><h4>Hawaii</h4><span class="p">12,00</span><small>mit Hinterschinken und Ananas</small></div>
+          <div class="row"><span class="n">70</span><h4>Fero</h4><span class="p">14,00</span><small>mit Hinterschinken, Thunfisch, Champignons, Paprika, Zwiebeln und Oliven</small></div>
+          <div class="row"><span class="n">71</span><h4>Zilan</h4><span class="p">14,00</span><small>mit Broccoli, Spinat, Champignons, Paprika, Peperoni und Hollandaise</small></div>
+          <div class="row"><span class="n">72</span><h4>Sardellen</h4><span class="p">13,00</span><small>mit Sardellen und Knoblauch</small></div>
+          <div class="row"><span class="n">73</span><h4>Mozzarella</h4><span class="p">12,00</span><small>mit frischen Tomaten und Mozzarella</small></div>
+          <div class="row"><span class="n">74</span><h4>Frutti di Mare</h4><span class="p">13,50</span><small>mit Meeresfrüchten</small></div>
+          <div class="row"><span class="n">75</span><h4>Garnelen</h4><span class="p">13,50</span><small>mit Garnelen und Knoblauchöl</small></div>
+          <div class="row"><span class="n">76</span><h4>Sucuk</h4><span class="p">13,00</span><small>mit Knoblauchwurst</small></div>
+          <div class="row"><span class="n">77</span><h4>Spaghetti Bolognese</h4><span class="p">13,00</span><small>mit Hackfleischsauce</small></div>
+          <div class="row"><span class="n">78</span><h4>Amara</h4><span class="p">12,00</span><small>mit Spinat und Weichkäse</small></div>
+          <div class="row"><span class="n">79</span><h4>Alisya</h4><span class="p">13,50</span><small>mit Hähnchenbrust, Mais, Paprika und Hollandaise</small></div>
+          <div class="row"><span class="n">80</span><h4>Döner Pizza</h4><span class="p">12,50</span><small>mit Dönerfleisch und Zwiebeln</small></div>
+        </div>
+        <div>
+          <div class="board">
+            <div class="board-head"><h3>Specials</h3></div>
+            <div class="row"><span class="n">81</span><h4>Döner Pizza Hollandaise</h4><span class="p">13,50</span><small>mit Dönerfleisch, Zwiebeln und Hollandaise</small></div>
+            <div class="row"><span class="n">82</span><h4>Döner Calzone</h4><span class="p">13,50</span><small>mit Dönerfleisch</small></div>
+            <div class="row"><span class="n">83</span><h4>Calzone</h4><span class="p">13,00</span><small>mit Hinterschinken, Salami, Thunfisch, Paprika und Champignons</small></div>
+            <div class="row"><span class="n">84</span><h4>Veggi</h4><span class="p">13,00</span><small>mit Broccoli, Champignons, Spinat, Paprika und Knoblauch</small></div>
+            <div class="row"><span class="n">85</span><h4>Gemüse</h4><span class="p">14,00</span><small>mit Spinat, Peperoni, Paprika, frischen Tomaten und Artischocken</small></div>
+            <div class="row"><span class="n">86</span><h4>XXL Pizza mit 3 Beilagen</h4><span class="p">40,00</span><small>60 × 40 cm</small></div>
+          </div>
+          <div class="board" style="margin-top:26px">
+            <div class="board-head"><h3>Pizzabrötchen</h3></div>
+            <div class="row"><span class="n">87</span><h4>mit Kräutercreme</h4><span class="p">5,00</span></div>
+            <div class="row"><span class="n">88</span><h4>mit Goudakäse</h4><span class="p">7,50</span></div>
+            <div class="row"><span class="n">89</span><h4>mit Salami und Goudakäse</h4><span class="p">8,50</span></div>
+            <div class="row"><span class="n">90</span><h4>mit Hinterschinken und Goudakäse</h4><span class="p">8,50</span></div>
+            <div class="row"><span class="n">91</span><h4>mit Thunfisch und Goudakäse</h4><span class="p">8,50</span></div>
+            <div class="row"><span class="n">92</span><h4>mit Spinat und Weichkäse</h4><span class="p">9,50</span></div>
+            <div class="row"><span class="n">93</span><h4>mit Dönerfleisch und Goudakäse</h4><span class="p">10,00</span></div>
+            <div class="row"><span class="n">94</span><h4>mit Knoblauchwurst und Goudakäse</h4><span class="p">10,00</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="p-pasta" role="tabpanel" aria-labelledby="t-pasta" hidden>
+      <div class="two">
+        <div class="board">
+          <div class="board-head"><h3>Pasta</h3><small>Spaghetti, Maccaroni, Bandnudeln oder Tortellini</small></div>
+          <div class="row"><span class="n">1</span><h4>Napoli</h4><span class="p">10,00</span><small>mit hausgemachter Tomatensauce</small></div>
+          <div class="row"><span class="n">2</span><h4>Bolognese</h4><span class="p">10,90</span><small>mit hausgemachter Hackfleischsauce</small></div>
+          <div class="row"><span class="n">3</span><h4>Broccoli</h4><span class="p">10,50</span><small>mit Broccoli, Tomaten-Sahnesauce und Knoblauch</small></div>
+          <div class="row"><span class="n">4</span><h4>Alla Panna</h4><span class="p">10,50</span><small>mit Hinterschinken und Sahnesauce</small></div>
+          <div class="row"><span class="n">5</span><h4>Carbonara</h4><span class="p">11,50</span><small>mit Hinterschinken, Sahnesauce und Ei</small></div>
+          <div class="row"><span class="n">6</span><h4>Garnelen</h4><span class="p">14,50</span><small>mit Champignons, Sahnesauce und Knoblauch</small></div>
+          <div class="row"><span class="n">7</span><h4>Quattro Formaggi</h4><span class="p">14,50</span><small>mit Parmesan, Mozzarella, Gorgonzola, Gouda und Sahnesauce</small></div>
+          <div class="row"><span class="n">8</span><h4>Vegetaria</h4><span class="p">12,50</span><small>mit Broccoli, Spinat, Paprika und Tomatensauce</small></div>
+          <div class="row"><span class="n">9</span><h4>Ala Fero</h4><span class="p">17,50</span><small>mit Lachs, Cherrytomaten, Knoblauch-Sahnesauce, Rucola und Parmesan</small></div>
+          <div class="row"><span class="n">10</span><h4>Ala Steak</h4><span class="p">17,50</span><small>mit frischen Paprika, Zwiebeln, Champignons und Steakstreifen</small></div>
+          <div class="row"><span class="n">11</span><h4>Anatolia</h4><span class="p">13,50</span><small>mit Dönerfleisch, Champignons, Paprika und Sahnesauce</small></div>
+          <div class="row"><span class="n">11a</span><h4>Pesto</h4><span class="p">14,50</span><small>Hähnchen, Sahne, Rucola, Parmesan und Pesto</small></div>
+          <div class="row"><span class="n">11b</span><h4>Arrabiata</h4><span class="p">14,50</span><small>Hähnchen, Paprika, Zwiebeln, Jalapeños, Sahne (scharf)</small></div>
+          <p class="note">Jedes Nudelgericht auf Wunsch mit Parmesan (+2,50 €) oder mit Gouda überbacken (+2,00 €). Bandnudeln und Tortellini +1,00 €.</p>
+        </div>
+        <div class="board">
+          <div class="board-head"><h3>Überbacken</h3></div>
+          <div class="row"><span class="n">124a</span><h4>Broccoli</h4><span class="p">15,50</span><small>Hähnchen, Broccoli, Kartoffeln, Knoblauch, Sahne und Gouda</small></div>
+          <div class="row"><span class="n">124b</span><h4>Spinat</h4><span class="p">15,50</span><small>Champignons, Spinat, Kartoffeln, Knoblauch, Sahne und Gouda</small></div>
+          <div class="row"><span class="n">124c</span><h4>Lasagne</h4><span class="p">16,00</span><small>nach Art des Hauses</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="p-salate" role="tabpanel" aria-labelledby="t-salate" hidden>
+      <div class="two">
+        <div class="board">
+          <div class="board-head"><h3>Salate</h3><small>mit Joghurt-, Balsamico- oder French-Dressing</small></div>
+          <div class="row"><span class="n">98</span><h4>Gemischter Salat</h4><span class="p">11,00</span><small>Krautsalat, Eisbergsalat, Tomate, Gurke, Mais, Oliven, Weichkäse und Peperoni</small></div>
+          <div class="row"><span class="n">99</span><h4>Cappricciosasalat</h4><span class="p">13,50</span><small>mit Tomaten, Gurken, Hinterschinken, Thunfisch, Ei und Goudakäse</small></div>
+          <div class="row"><span class="n">100</span><h4>Chickensalat</h4><span class="p">14,50</span><small>mit Tomaten, Gurken, Paprika, gebratenen Zwiebeln und Hähnchenbrustfilet</small></div>
+          <div class="row"><span class="n">101</span><h4>Mozzarella Salat</h4><span class="p">13,00</span><small>mit Rucola, Cherrytomaten, Mozzarella und Joghurtdressing</small></div>
+          <div class="row"><span class="n">102</span><h4>Thunfisch Salat</h4><span class="p">13,00</span><small>mit Eisbergsalat, Zwiebel, Tomate, Gurke und Joghurtdressing</small></div>
+          <div class="row"><span class="n">103</span><h4>Krabben Salat</h4><span class="p">14,00</span><small>mit Eisbergsalat, Tomaten, Gurke und Cocktailsauce</small></div>
+          <div class="row"><span class="n">104</span><h4>Fero Salat</h4><span class="p">14,00</span><small>mit Eisbergsalat, Tomaten, Gurken, Ananas, Ei und Schinken</small></div>
+          <div class="row"><span class="n">105</span><h4>Steak Salat</h4><span class="p">16,50</span><small>mit Steakstreifen, gebratenen Zwiebeln, Champignons und Pinienkernen</small></div>
+        </div>
+        <div>
+          <div class="board">
+            <div class="board-head"><h3>Snacks</h3></div>
+            <div class="row"><span class="n">106</span><h4>6er Chicken Nuggets</h4><span class="p">5,00</span><small>mit 1 Sauce nach Wahl</small></div>
+            <div class="row"><span class="n">107</span><h4>9er Chicken Nuggets</h4><span class="p">6,50</span><small>mit 2 Saucen nach Wahl</small></div>
+            <div class="row"><span class="n">108</span><h4>Bratwurst mit Pommes</h4><span class="p">8,00</span></div>
+            <div class="row"><span class="n">109</span><h4>Currywurst mit Pommes</h4><span class="p">9,00</span></div>
+            <div class="row"><span class="n">110</span><h4>Paprikawurst (Ung. Art) mit Pommes</h4><span class="p">10,00</span></div>
+            <div class="row"><span class="n">111</span><h4>Jägerwurst mit Pommes</h4><span class="p">10,00</span></div>
+          </div>
+          <div class="board" style="margin-top:26px">
+            <div class="board-head"><h3>Extras</h3></div>
+            <div class="row"><span class="n">112</span><h4>Portion Pommes</h4><span class="p">3,50</span></div>
+            <div class="row"><span class="n">113</span><h4>Potato Wedges</h4><span class="p">5,00</span></div>
+            <div class="row"><span class="n">114</span><h4>Süßkartoffeln</h4><span class="p">5,00</span></div>
+            <div class="row"><span class="n">115</span><h4>Chilli Cheese Pommes</h4><span class="p">6,50</span></div>
+            <div class="row"><span class="n">116</span><h4>Knoblauch Pommes</h4><span class="p">5,00</span></div>
+            <div class="row"><span class="n">117</span><h4>Folienkartoffeln mit Sourcreme</h4><span class="p">6,50</span></div>
+            <div class="row"><span class="n">122</span><h4>Mozzarella Sticks</h4><span class="p">5,00</span></div>
+            <div class="row"><span class="n">123</span><h4>Onion Rings</h4><span class="p">5,00</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="note-marker reveal">Alle Gerichte natürlich auch zum Mitnehmen!</span>
+    <p class="note">Alle Preise in Euro. Änderungen vorbehalten. Informationen zu Allergenen und Zusatzstoffen erhalten Sie bei uns im Restaurant.</p>
+  </div>
+</section>
+
+<section class="hotel" id="hotel">
+  <div class="wrap">
+    <div class="hotel-media reveal" id="hotelMedia">
+      <div class="a"><img src="https://images.unsplash.com/photo-1789930153790-6ccf207aed1d?auto=format&fit=crop&w=1100&q=75" alt="Gemütliches Zimmer mit Holzwand und warmer Leselampe" loading="lazy"></div>
+      <div class="b"><img src="https://images.unsplash.com/photo-1540326067491-c02c21c8d5a4?auto=format&fit=crop&w=700&q=75" alt="Waldweg in der Eifel im Sonnenlicht" loading="lazy"></div>
+      <span class="stamp">Hotel &amp; Gasthof</span>
+    </div>
+    <div>
+      <span class="kicker reveal">Übernachten bei FERO</span>
+      <h2 class="reveal" style="margin-top:16px;font-size:clamp(34px,4.4vw,58px)">Essen, schlafen,<br><span class="gold">Eifel erleben.</span></h2>
+      <p class="reveal" style="color:var(--dim);font-size:18px;margin:20px 0 0">Unser Hotel und Gasthof im ehemaligen Hüttenhof liegt mitten in Kall. Abends gemütlich essen, morgens ausgeruht in die nächste Etappe, ideal für Wanderer, Radfahrer und Motorradfahrer.</p>
+      <ul>
+        <li class="reveal" style="--d:.05s"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 18h18M3 18v2M21 18v2M7 10V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3"/></svg><span><b>Gemütliche Zimmer</b><span>für eine Nacht oder die ganze Tour</span></span></li>
+        <li class="reveal" style="--d:.12s"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 2v8a2 2 0 0 0 2 2v10M5 2v6M9 2v6M17 22V2c-2 0-4 3-4 7s2 5 4 5"/></svg><span><b>Restaurant im Haus</b><span>Burger, Steaks und Grill direkt vor der Tür</span></span></li>
+        <li class="reveal" style="--d:.19s"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h3l3 8M5.5 17.5 9 9h6l3.5 8.5M9 9 7 6H5"/></svg><span><b>Für Rad &amp; Motorrad</b><span>perfekter Stopp auf Eifel-Touren</span></span></li>
+        <li class="reveal" style="--d:.26s"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg><span><b>Parkplätze am Haus</b><span>bequem anreisen</span></span></li>
+      </ul>
+      <form class="room-form reveal" id="roomForm" novalidate>
+        <label>Anreise<input type="date" name="an" required></label>
+        <label>Abreise<input type="date" name="ab" required></label>
+        <label>Personen<select name="p"><option>1</option><option selected>2</option><option>3</option><option>4+</option></select></label>
+        <label class="full">Name &amp; Telefon<input name="kontakt" placeholder="z. B. Anna Müller, 0170 1234567" required></label>
+        <button class="btn btn-gold full" type="submit">Zimmer anfragen</button>
+        <div class="ok" id="roomOk">Danke! Ihre Anfrage ist eingegangen. Wir melden uns mit Verfügbarkeit und Preis. (Vorschau: Im Entwurf wird nichts versendet.)</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="reservieren" class="chalk">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="kicker reveal">Reservieren &amp; Bestellen</span>
+        <h2 class="reveal" style="margin-top:16px">Ihr Tisch.<br><span class="gold">Ihr Abend.</span></h2>
+      </div>
+      <p class="reveal">Am Wochenende wird es voll. Reservieren lohnt sich: Das schreiben unsere Gäste in über 20 Bewertungen.</p>
+    </div>
+    <div class="ways">
+      <div class="way reveal"><div class="ic"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 15l2 2 4-4"/></svg></div><h3>Tisch reservieren</h3><p>Kurz anrufen und Ihren Wunschtermin nennen, für zwei oder für die ganze Runde.</p></div>
+      <div class="way reveal" style="--d:.12s"><div class="ic"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg></div><h3>Zum Mitnehmen</h3><p>Alle Gerichte gibt es auch zum Mitnehmen. Vorher bestellen und frisch abholen.</p></div>
+      <div class="way reveal" style="--d:.24s"><div class="ic"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div><h3>Mit der ganzen Runde</h3><p>Grillteller für 2 oder 4 Personen, XXL-Pizza 60 × 40 cm: ideal für Familie und Freunde.</p></div>
+    </div>
+    <div class="hotline reveal zoom">
+      <div><small>Reservierung &amp; Bestellung</small><a class="num" href="tel:+4924418630">02441 8630</a></div>
+      <a class="btn btn-gold" href="tel:+4924418630">Jetzt anrufen</a>
+    </div>
+  </div>
+</section>
+
+<section class="voices">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="kicker reveal">Stimmen</span>
+        <h2 class="reveal" style="margin-top:16px">700 Gäste<br><span class="gold">können nicht irren.</span></h2>
+      </div>
+      <p class="reveal">4,7 Sterne bei Google. Das sagen unsere Gäste am häufigsten:</p>
+    </div>
+    <div class="grid">
+      <div class="bigq reveal left">
+        <span class="stars">★★★★★</span>
+        <blockquote>„Das Essen war genau richtig und wir konnten anschließend <em>mit neuer Energie die nächsten Anstiege in Angriff nehmen</em> – Super!“</blockquote>
+        <cite>Sebastian · Google-Bewertung</cite>
+        <div class="topics">
+          <span><b>Burger</b> · 63 Bewertungen</span>
+          <span><b>Preis-Leistung</b> · 19</span>
+          <span><b>Personal</b> · 11</span>
+          <span><b>Salatbar</b> · 9</span>
+          <span><b>Schnitzel</b> · 9</span>
+        </div>
+      </div>
+      <div class="counters">
+        <div class="counter reveal right"><b class="gold" data-count="700" data-suffix="+">0</b><span>Google-Bewertungen</span></div>
+        <div class="counter reveal right" style="--d:.12s"><b class="gold" data-count="120" data-suffix="+">0</b><span>Gerichte auf der Karte</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="instagram" class="chalk" style="padding-top:90px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="kicker reveal">Instagram</span>
+        <h2 class="reveal" style="margin-top:16px">@fero.kall</h2>
+      </div>
+      <a class="btn btn-ghost reveal" href="https://www.instagram.com/fero.kall/" target="_blank" rel="noopener">Folgen auf Instagram</a>
+    </div>
+    <div class="insta-grid">
+      <a class="ig reveal" href="https://www.instagram.com/fero.kall/" target="_blank" rel="noopener" style="--bg:linear-gradient(to top,rgba(0,0,0,.88),rgba(0,0,0,.12) 65%),url('https://images.unsplash.com/photo-1669490882811-703aa7f0d7a0?auto=format&fit=crop&w=700&q=75') center/cover"><span class="s">eure Riesenburger!</span><span class="t">Burger-<br>Liebe</span></a>
+      <a class="ig reveal" href="https://www.instagram.com/fero.kall/" target="_blank" rel="noopener" style="--bg:linear-gradient(to top,rgba(0,0,0,.88),rgba(0,0,0,.12) 65%),url('https://images.unsplash.com/photo-1671522636018-485ef1f7cd8f?auto=format&fit=crop&w=700&q=75') center/cover;--d:.08s"><span class="s">Original argentinisch</span><span class="t">Steak-<br>Abend</span></a>
+      <a class="ig reveal" href="https://www.instagram.com/fero.kall/" target="_blank" rel="noopener" style="--bg:linear-gradient(to top,rgba(0,0,0,.88),rgba(0,0,0,.12) 65%),url('https://images.unsplash.com/photo-1613564834361-9436948817d1?auto=format&fit=crop&w=700&q=75') center/cover;--d:.16s"><span class="s">Pizza &amp; Grill</span><span class="t">Frisch aus<br>dem Ofen</span></a>
+      <a class="ig reveal" href="https://www.instagram.com/fero.kall/" target="_blank" rel="noopener" style="--bg:linear-gradient(to top,rgba(0,0,0,.88),rgba(0,0,0,.12) 65%),url('https://images.unsplash.com/photo-1540326067491-c02c21c8d5a4?auto=format&fit=crop&w=700&q=75') center/cover;--d:.24s"><span class="s">Nach der Tour</span><span class="t">Einkehr in<br>der Eifel</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="besuch">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="kicker reveal">Besuchen Sie uns</span>
+        <h2 class="reveal" style="margin-top:16px">Öffnungszeiten<br><span class="gold">&amp; Anfahrt.</span></h2>
+      </div>
+    </div>
+    <div class="visit">
+      <div class="hours reveal left">
+        <h3>Öffnungszeiten</h3>
+        <table><tbody id="hoursBody">
+          <tr data-d="1"><td>Montag</td><td>Ruhetag</td></tr>
+          <tr data-d="2"><td>Dienstag</td><td>Ruhetag</td></tr>
+          <tr data-d="3"><td>Mittwoch</td><td>11–22 Uhr</td></tr>
+          <tr data-d="4"><td>Donnerstag</td><td>11–22 Uhr</td></tr>
+          <tr data-d="5"><td>Freitag</td><td>11–22 Uhr</td></tr>
+          <tr data-d="6"><td>Samstag</td><td>11–22 Uhr</td></tr>
+          <tr data-d="0"><td>Sonntag &amp; Feiertage</td><td>12–21 Uhr</td></tr>
+        </tbody></table>
+      </div>
+      <div class="where reveal right">
+        <span class="hint">Im ehemaligen Hüttenhof</span>
+        <address>Hüttenstraße 56<br>53925 Kall</address>
+        <a href="tel:+4924418630" style="font-family:var(--display);font-size:34px;text-decoration:none;color:#fff">☎ 02441 8630</a>
+        <div class="links">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=FERO+Restaurant+Grill+H%C3%BCttenstra%C3%9Fe+56+Kall" target="_blank" rel="noopener">Route planen</a>
+          <a href="https://www.instagram.com/fero.kall/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b style="color:#fff">FERO Restaurant &amp; Grill · Hotel und Gasthof</b><br>Hüttenstraße 56 · 53925 Kall · 02441 8630 · Inhaber: Mustafa Evren</div>
+    <span class="slogan">Wir freuen uns auf euch!</span>
+    <div><a href="#">Impressum</a><a href="#">Datenschutz</a><span>© 2026 FERO · Beispielfotos: Unsplash</span></div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-red" href="tel:+4924418630">Anrufen &amp; reservieren</a>
+  <a class="btn btn-ghost" href="#karte">Karte</a>
+</div>
+
+<button class="fab" id="fab" aria-expanded="false" aria-controls="chat">
+  <span class="dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+  <span class="label">Reservieren per Chat</span>
+</button>
+<div class="chat" id="chat" role="dialog" aria-label="FERO Assistent" aria-hidden="true">
+  <div class="chat-head">
+    <span style="font-family:var(--display);background:var(--red);padding:6px 9px;border-radius:4px;letter-spacing:.06em">FERO</span>
+    <div><b>FERO Kall</b><small>● Digitaler Assistent · antwortet sofort</small></div>
+    <button id="chatClose" aria-label="Schließen">×</button>
+  </div>
+  <div class="chat-body" id="chatBody"></div>
+  <form class="chat-in" id="chatForm"><input id="chatIn" placeholder="Nachricht schreiben …" autocomplete="off"><button type="submit">Senden</button></form>
+</div>
+
+<script>
+(function () {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Header, Fortschrittsbalken, Parallax (per requestAnimationFrame für ruckelfreies Scrollen)
+  const header = document.getElementById('header'), bar = document.getElementById('progress'), art = document.getElementById('heroArt');
+  let ticking = false;
+  const update = () => {
+    const y = scrollY, h = document.documentElement.scrollHeight - innerHeight;
+    header.classList.toggle('scrolled', y > 20);
+    bar.style.transform = 'scaleX(' + (h > 0 ? y / h : 0) + ')';
+    if (!reduce && art && y < innerHeight * 1.2) art.style.translate = '0 ' + (y * 0.12).toFixed(1) + 'px';
+    ticking = false;
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true }); update();
+
+  // Reveal beim Scrollen
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal, .wipe, #plate').forEach(el => io.observe(el));
+  document.querySelectorAll('.board .row').forEach((r, i) => { r.classList.add('reveal'); r.style.setProperty('--d', (i % 10) * 0.035 + 's'); io.observe(r); });
+
+  // Zähler
+  const co = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return; co.unobserve(e.target);
+    const el = e.target, to = +el.dataset.count, suf = el.dataset.suffix || '';
+    if (reduce) { el.textContent = to + suf; return; }
+    const t0 = performance.now(), dur = 1600;
+    const step = t => { const p = Math.min(1, (t - t0) / dur), v = Math.round(to * (1 - Math.pow(1 - p, 4))); el.textContent = v + suf; if (p < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  }), { threshold: 0.5 });
+  document.querySelectorAll('[data-count]').forEach(el => co.observe(el));
+
+  // Glut-Funken
+  const emb = document.getElementById('embers');
+  if (emb && !reduce) for (let i = 0; i < 28; i++) {
+    const s = document.createElement('i');
+    s.style.left = Math.random() * 100 + '%';
+    s.style.animationDuration = 6 + Math.random() * 8 + 's';
+    s.style.animationDelay = -Math.random() * 12 + 's';
+    s.style.setProperty('--dx', (Math.random() * 140 - 70) + 'px');
+    const z = 2 + Math.random() * 4; s.style.width = s.style.height = z + 'px';
+    emb.appendChild(s);
+  }
+
+  // Öffnungsstatus: Mi–Sa 11–22, So 12–21, Mo/Di Ruhetag
+  const now = new Date(), d = now.getDay(), m = now.getHours() * 60 + now.getMinutes();
+  const slot = (d === 1 || d === 2) ? null : d === 0 ? [720, 1260] : [660, 1320];
+  const open = slot && m >= slot[0] && m < slot[1];
+  const st = document.getElementById('status'), tx = document.getElementById('statusText');
+  if (open) tx.textContent = 'Jetzt geöffnet · bis ' + (slot[1] / 60) + ' Uhr';
+  else { st.classList.add('closed'); tx.textContent = (d === 1 || d === 2) ? 'Heute Ruhetag · ab Mittwoch 11 Uhr wieder da' : (slot && m < slot[0] ? 'Öffnet heute um ' + slot[0] / 60 + ' Uhr' : 'Gerade geschlossen'); }
+  const row = document.querySelector('#hoursBody tr[data-d="' + d + '"]'); if (row) row.classList.add('today');
+
+  // Tabs
+  const tabs = document.querySelectorAll('.tabs button');
+  const select = btn => {
+    tabs.forEach(b => b.setAttribute('aria-selected', b === btn));
+    document.querySelectorAll('.panel').forEach(p => { const on = p.id === btn.getAttribute('aria-controls'); p.classList.toggle('active', on); p.hidden = !on; if (on) p.querySelectorAll('.reveal').forEach(r => r.classList.add('in')); });
+  };
+  tabs.forEach(b => b.addEventListener('click', () => select(b)));
+  document.querySelectorAll('[data-tab]').forEach(a => a.addEventListener('click', () => select(document.getElementById(a.dataset.tab))));
+
+  // Zimmer-Anfrage (Demo)
+  document.getElementById('roomForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const miss = [...this.querySelectorAll('[required]')].find(i => !i.value.trim());
+    if (miss) { miss.focus(); return; }
+    document.getElementById('roomOk').style.display = 'block';
+    this.querySelector('button').disabled = true;
+  });
+
+  // Demo-Assistent (geskriptet; im Live-Betrieb durch echten KI-Agenten ersetzt)
+  const fab = document.getElementById('fab'), box = document.getElementById('chat'), body = document.getElementById('chatBody');
+  const form = document.getElementById('chatForm'), input = document.getElementById('chatIn');
+  let step = 'start', req = {};
+  const say = (t, who = 'bot') => { const el = document.createElement('div'); el.className = 'msg ' + who; el.textContent = t; body.appendChild(el); body.scrollTop = body.scrollHeight; };
+  const quick = opts => { const q = document.createElement('div'); q.className = 'quick'; opts.forEach(o => { const b = document.createElement('button'); b.type = 'button'; b.textContent = o; b.onclick = () => { q.remove(); handle(o); }; q.appendChild(b); }); body.appendChild(q); body.scrollTop = body.scrollHeight; };
+  function start() { say('Hallo! 👋 Willkommen bei FERO. Wobei kann ich helfen?'); quick(['Tisch reservieren', 'Zimmer anfragen', 'Öffnungszeiten', 'Zum Mitnehmen bestellen']); }
+  function handle(t) {
+    say(t, 'me');
+    setTimeout(() => {
+      if (step === 'start') {
+        if (t === 'Öffnungszeiten') { say('Mi–Sa 11–22 Uhr, sonntags und feiertags 12–21 Uhr. Montag und Dienstag ist Ruhetag.'); quick(['Tisch reservieren', 'Zimmer anfragen']); return; }
+        req.type = t;
+        if (t === 'Tisch reservieren') { say('Sehr gern! Für welchen Tag und wie viele Personen?'); quick(['Heute Abend, 2 Personen', 'Samstag, 4 Personen', 'Größere Runde']); step = 'detail'; return; }
+        if (t === 'Zimmer anfragen') { say('Gern! Wann möchten Sie anreisen, wie viele Nächte und für wie viele Personen?'); step = 'detail'; return; }
+        say('Gern! Was möchten Sie bestellen? Alle Gerichte gibt es auch zum Mitnehmen.'); quick(['Big Mama XXL (23 €)', 'Jägerschnitzel (14 €)', 'Grillteller für 2 (49 €)']); step = 'detail';
+      } else if (step === 'detail') {
+        req.detail = t; say('Notiert! Wie ist Ihr Name und Ihre Telefonnummer?'); step = 'contact';
+      } else if (step === 'contact') {
+        say('Danke! Ihre Anfrage (' + req.type + ': ' + req.detail + ') ist bei uns. Wir melden uns zur Bestätigung. 🔥');
+        say('(Vorschau: Im Live-Betrieb landet die Anfrage sofort per E-Mail oder WhatsApp bei FERO.)'); step = 'done';
+      } else say('Für alles Weitere: 02441 8630.');
+    }, 450);
+  }
+  const toggle = o => { box.classList.toggle('open', o); box.setAttribute('aria-hidden', !o); fab.setAttribute('aria-expanded', o); if (o && !body.children.length) start(); if (o) input.focus(); };
+  fab.addEventListener('click', () => toggle(!box.classList.contains('open')));
+  document.getElementById('chatClose').addEventListener('click', () => toggle(false));
+  form.addEventListener('submit', e => { e.preventDefault(); const v = input.value.trim(); if (!v) return; input.value = ''; body.querySelectorAll('.quick').forEach(q => q.remove()); handle(v); });
+})();
+</script>
+</body>
+</html>
